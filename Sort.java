@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Random;
 
 class Sort { 
 
@@ -23,6 +24,26 @@ class Sort {
             }
           }
         }
+        //GO BOGO
+        /* Currently non-functional BOGOsort, have to implement check for correctness, and fix random array randomizer.
+        boolean doneBOGO = false;
+        Random rand = new Random();
+        double arrBOGO[];
+        
+        while (doneBOGO = false){
+          for (int i = 0; i < (end-1); i++) {
+            tempNum = arrBOGO[i];
+            tempNum2 = arrBOGO[i+1];
+            
+            int randOutput = rand.nextInt(10);
+            
+            if(randOutput >= 5){
+              
+              arrBOGO[i+1] = tempNum;
+              arrBOGO[i] = tempNum2;
+            }
+          }
+        }*/
     } 
 
   
