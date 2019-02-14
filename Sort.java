@@ -5,8 +5,9 @@ class Sort {
 
     // start and end are optional - some sorting algorithms use them, but you can ignore them
     void sort(double arr[], long start, long end) 
-    { 
-      for(int x=0; x <= (arr.length-1); x++)
+    {
+      double initArr[] = arr;
+      for(int x=0; x <= (arr.length-1); x++){
         System.out.println(arr[x]);
         
         double tempNum;
@@ -24,28 +25,33 @@ class Sort {
             }
           }
         }
+      }
         //GO BOGO
-        /* Currently non-functional BOGOsort, have to implement check for correctness, and fix random array randomizer.
-        boolean doneBOGO = false;
-        Random rand = new Random();
-        double arrBOGO[];
-        
-        while (doneBOGO = false){
-          for (int i = 0; i < (end-1); i++) {
-            tempNum = arrBOGO[i];
-            tempNum2 = arrBOGO[i+1];
-            
-            int randOutput = rand.nextInt(10);
-            
-            if(randOutput >= 5){
-              
-              arrBOGO[i+1] = tempNum;
-              arrBOGO[i] = tempNum2;
+        //Currently non-functional BOGOsort, have to implement check for correctness, and fix random array randomizer.
+      boolean doneBOGO = false;
+      Random rand = new Random();
+      double arrBOGO[] = initArr;
+      double tempNum;
+      double tempNum2;
+      
+      while (doneBOGO = false){
+        for (int i = 0; i < (end-1); i++) {
+          tempNum = arrBOGO[i];
+          tempNum2 = arrBOGO[i+1];
+          
+          int randOutput = rand.nextInt(10);
+          
+          if(randOutput >= 5){
+            arrBOGO[i+1] = tempNum;
+            arrBOGO[i] = tempNum2;
             }
-          }
-        }*/
+        }
+        System.out.println(arrBOGO);
+        if(arrBOGO == arr) {
+          doneBOGO = true;
+        }
+      }
     } 
-
   
     // Test program 
     public static void main(String args[]) 
