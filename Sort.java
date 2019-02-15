@@ -1,12 +1,15 @@
 import java.util.Arrays;
 import java.util.Random;
 
-class Sort { 
+class Main { 
 
     // start and end are optional - some sorting algorithms use them, but you can ignore them
     void sort(double arr[], long start, long end) 
     {
       double initArr[] = arr;
+      //System.out.println(Arrays.toString(initArr)); //All of these output the initial array, not the sorted one
+      //System.out.println("input array");
+      //System.out.println(Arrays.toString(arr));
       for(int x=0; x <= (arr.length-1); x++){
         System.out.println(arr[x]);
         
@@ -26,23 +29,30 @@ class Sort {
           }
         }
       }
-        //GO BOGO
-        //Currently non-functional BOGOsort, have to implement check for correctness, and fix random array randomizer.
+      
+      //GO BOGO
+      
       boolean doneBOGO = false;
       Random rand = new Random();
       double arrBOGO[] = initArr;
       double tempNum;
       double tempNum2;
       
-      while (doneBOGO = false){
+      System.out.println("BOGO Array");
+      System.out.println(Arrays.toString(arrBOGO));
+      System.out.println("Initial Array");
+      System.out.println(Arrays.toString(initArr));
+      
+      
+      while (doneBOGO = false){ //loop bogo until it succeeds
         for (int i = 0; i < (end-1); i++) {
           tempNum = arrBOGO[i];
-          tempNum2 = arrBOGO[i+1];
+          tempNum2 = arrBOGO[i+1]; //sets temps for switching purposes
           
-          int randOutput = rand.nextInt(10);
+          int randOutput = rand.nextInt(10); //creates random int between 0 and 10
           
           if(randOutput >= 5){
-            arrBOGO[i+1] = tempNum;
+            arrBOGO[i+1] = tempNum; //if random is above or equal to 5, switch the two numbers
             arrBOGO[i] = tempNum2;
             }
         }
@@ -51,7 +61,7 @@ class Sort {
           doneBOGO = true;
         }
       }
-    } 
+    }
   
     // Test program 
     public static void main(String args[]) 
